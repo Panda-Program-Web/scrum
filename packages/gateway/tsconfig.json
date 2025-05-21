@@ -1,13 +1,12 @@
 {
-  "extends": "../core/tsconfig.json",
+  "extends": "@panda-project/config/base.json",
   "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "composite": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "outDir": "./dist"
   },
-  "include": ["src/**/*"]
+  "include": ["src"],
+  "exclude": ["**/*.test.ts"]
 }

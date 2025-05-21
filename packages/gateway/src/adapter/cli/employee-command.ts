@@ -5,7 +5,7 @@ import {
   CreateMultipleEmployeeCommand,
   EditEmployeeCommand,
   RemoveEmployeeCommand,
-} from '@/application/use-case/employee'
+} from '@panda-project/use-case'
 
 export class CreateEmployeeCliCommand implements CreateEmployeeCommand {
   constructor(private readonly employeeName: string) {}

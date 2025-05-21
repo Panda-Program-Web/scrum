@@ -1,6 +1,6 @@
 import { ProjectName } from '@panda-project/core'
 
-import { CreateProjectCommand } from '@/application/use-case/project'
+import { CreateProjectCommand } from '@panda-project/use-case'
 
 export class CreateProjectWebCommand implements CreateProjectCommand {
   constructor(private readonly projectName: string) {}

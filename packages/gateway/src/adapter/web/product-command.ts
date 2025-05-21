@@ -1,6 +1,6 @@
 import { ProductName } from '@panda-project/core'
 
-import { CreateProductCommand } from '@/application/use-case/product'
+import { CreateProductCommand } from '@panda-project/use-case'
 
 export class CreateProductWebCommand implements CreateProductCommand {
   constructor(private readonly productName: string) {}

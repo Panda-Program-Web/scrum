@@ -6,7 +6,7 @@ import {
   DisbandScrumTeamCommand,
   EditScrumTeamCommand,
   RemoveDeveloperCommand,
-} from '@/application/use-case/scrum-team'
+} from '@panda-project/use-case'
 
 export class CreateScrumTeamCliCommand implements CreateScrumTeamCommand {
   constructor(

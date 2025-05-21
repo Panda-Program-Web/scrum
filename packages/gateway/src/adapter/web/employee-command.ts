@@ -1,6 +1,6 @@
 import { EmployeeId, EmployeeName } from '@panda-project/core'
 
-import { CreateEmployeeCommand, RemoveEmployeeCommand, EditEmployeeCommand } from '@/application/use-case/employee'
+import { CreateEmployeeCommand, EditEmployeeCommand, RemoveEmployeeCommand } from '@panda-project/use-case'
 
 export class CreateEmployeeWebCommand implements CreateEmployeeCommand {
   constructor(
