@@ -1,11 +1,7 @@
 'use server'
 
-import {
-  CreateEmployeeWebCommand,
-  RemoveEmployeeWebCommand,
-  EditEmployeeWebCommand,
-  EmployeeUseCase,
-} from '@panda-project/use-case'
+import { CreateEmployeeWebCommand, EditEmployeeWebCommand, RemoveEmployeeWebCommand } from '@panda-project/gateway'
+import { EmployeeUseCase } from '@panda-project/use-case'
 import { revalidatePath } from 'next/cache'
 import { z } from 'zod'
 

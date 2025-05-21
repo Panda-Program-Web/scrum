@@ -1,6 +1,7 @@
 'use server'
 
-import { InitScenario, InitWebCommand } from '@panda-project/use-case'
+import { InitWebCommand } from '@panda-project/gateway'
+import { InitScenario } from '@panda-project/use-case'
 import { redirect } from 'next/navigation'
 import { z } from 'zod'
 

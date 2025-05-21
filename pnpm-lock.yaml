@@ -90,6 +90,9 @@ importers:
       '@heroicons/react':
         specifier: ^2.0.18
         version: 2.2.0(react@18.2.0)
+      '@panda-project/gateway':
+        specifier: workspace:*
+        version: link:../../packages/gateway
       '@panda-project/use-case':
         specifier: workspace:*
         version: link:../../packages/use-case

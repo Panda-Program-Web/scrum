@@ -19,15 +19,6 @@ const rootIndex = cliPathIndex > 0 ? cliPathIndex : webPathIndex
 const basePath = dirname.slice(0, rootIndex)
 const dbFilePath = `${basePath}/db.json`
 
-declare global {
-  // eslint-disable-next-line @typescript-eslint/no-namespace
-  namespace NodeJS {
-    interface ProcessEnv {
-      NODE_ENV: 'test' | 'dev' | 'prod'
-    }
-  }
-}
-
 const adapter: Adapter<DataBase> = isTest ? new Memory<DataBase>() : new JSONFile<DataBase>(dbFilePath)
 const db = new Low<DataBase>(adapter, createDefaultData())
 const dbFileExists = () => fs.existsSync(dbFilePath)
@@ -41,4 +32,4 @@ const resetDb = async () => {
   await newDb.write()
 }
 
-export { adapter, db, dbFileExists, createDb, resetDb }
+export { adapter, createDb, db, dbFileExists, resetDb }
