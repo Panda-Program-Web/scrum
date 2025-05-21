@@ -6,8 +6,7 @@
     "scrum": "node dist/index.js",
     "dev": "node ../../packages/config/build.mjs",
     "build": "esbuild src/index.ts --bundle --outfile=dist/index.js --platform=node",
-    "type-check": "tspc --noEmit",
-    "jest": "jest"
+    "type-check": "tspc --noEmit"
   },
   "dependencies": {
     "@inquirer/prompts": "^3.1.2",
