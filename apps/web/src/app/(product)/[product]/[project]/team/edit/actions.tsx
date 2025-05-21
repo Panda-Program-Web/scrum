@@ -1,11 +1,7 @@
 'use server'
 
-import {
-  EditScrumTeamWebCommand,
-  CreateScrumTeamWebCommand,
-  DisbandScrumTeamWebCommand,
-  ScrumTeamUseCase,
-} from '@panda-project/use-case'
+import { CreateScrumTeamWebCommand, DisbandScrumTeamWebCommand, EditScrumTeamWebCommand } from '@panda-project/gateway'
+import { ScrumTeamUseCase } from '@panda-project/use-case'
 import { redirect } from 'next/navigation'
 import { z } from 'zod'
 

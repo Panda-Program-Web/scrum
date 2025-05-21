@@ -1,4 +1,5 @@
 export * from './employee'
+export * from './employee/command'
 
 export class Company {}
 

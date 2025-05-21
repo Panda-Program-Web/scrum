@@ -1,0 +1,24 @@
+{
+  "name": "@panda-project/gateway",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "tspc --emitDeclarationOnly && node ../config/build.mjs",
+    "build": "rm -rf dist && esbuild index.ts --bundle --outfile=dist/index.js --platform=node --format=esm && tspc --emitDeclarationOnly",
+    "type-check": "tspc --noEmit",
+    "jest": "node --experimental-vm-modules ../../node_modules/jest/bin/jest.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@panda-project/config": "workspace:*",
+    "@panda-project/core": "workspace:*",
+    "lowdb": "6.1.1"
+  },
+  "devDependencies": {
+    "@types/lowdb": "^1.0.15",
+    "@types/node": "^20.8.2"
+  },
+  "private": true
+}

@@ -1,10 +1,6 @@
 import { select } from '@inquirer/prompts'
-import {
-  EditScrumTeamCliCommand,
-  EditScrumTeamQueryService,
-  EditScrumTeamQueryServiceDto,
-  ScrumTeamUseCase,
-} from '@panda-project/use-case'
+import { EditScrumTeamCliCommand } from '@panda-project/gateway'
+import { EditScrumTeamQueryService, EditScrumTeamQueryServiceDto, ScrumTeamUseCase } from '@panda-project/use-case'
 import { Command } from 'commander'
 
 type SelectProductOwner = (

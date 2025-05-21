@@ -3,7 +3,11 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**"]
+      "outputs": ["dist/**"],
+      "env": ["NODE_ENV"],
+      "cache": true,
+      "persistent": false,
+      "maxParallel": 4
     },
     "type-check": {},
     "lint": {},

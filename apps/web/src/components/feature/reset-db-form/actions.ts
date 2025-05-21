@@ -1,6 +1,6 @@
 'use server'
 
-import { resetDb } from '@panda-project/use-case'
+import { resetDb } from '@panda-project/gateway'
 
 export const resetDbAction = async () => {
   try {

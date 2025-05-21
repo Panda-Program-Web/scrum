@@ -4,11 +4,11 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "tspc --watch --emitDeclarationOnly",
-    "build": "tspc",
+    "build": "rm -rf dist && tspc",
     "type-check": "tspc --noEmit",
     "jest": "jest"
   },
-  "devDependencies": {
+  "dependencies": {
     "@panda-project/config": "workspace:*"
   },
   "private": true

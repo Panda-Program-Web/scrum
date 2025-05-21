@@ -5,17 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "tspc --emitDeclarationOnly && node ../config/build.mjs",
-    "build": "esbuild index.ts --bundle --outfile=dist/index.js --platform=node --format=esm && tspc --emitDeclarationOnly",
-    "type-check": "tspc --noEmit",
-    "jest": "node --experimental-vm-modules ../../node_modules/jest/bin/jest.js"
+    "build": "rm -rf dist && esbuild index.ts --bundle --outfile=dist/index.js --platform=node --format=esm && tspc --emitDeclarationOnly",
+    "type-check": "tspc --noEmit"
   },
   "dependencies": {
+    "@panda-project/config": "workspace:*",
     "@panda-project/core": "workspace:*",
-    "lowdb": "6.1.1"
+    "@panda-project/gateway": "workspace:*"
   },
   "devDependencies": {
-    "@panda-project/config": "workspace:*",
-    "@types/lowdb": "^1.0.15",
     "@types/node": "^20.8.2"
   },
   "private": true

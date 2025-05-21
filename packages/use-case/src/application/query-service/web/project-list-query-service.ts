@@ -9,7 +9,7 @@ import {
 
 import { DefaultError, ErrorReason, Result } from './types'
 
-import { ProductRepository, ProjectRepository, ScrumTeamRepository } from '@/gateway/repository/json'
+import { ProductRepository, ProjectRepository, ScrumTeamRepository } from '@panda-project/gateway'
 
 export type ProjectListQueryServiceDto = {
   product?: {

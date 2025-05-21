@@ -1,6 +1,6 @@
 import { EmployeeRepositoryInterface } from '@panda-project/core'
 
-import { EmployeeRepository } from '@/gateway/repository/json'
+import { EmployeeRepository } from '@panda-project/gateway'
 
 export type RemoveEmployeeQueryServiceDto = { id: number; name: string }[]
 

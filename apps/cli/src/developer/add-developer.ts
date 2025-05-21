@@ -1,12 +1,8 @@
 import * as console from 'console'
 
 import { confirm, select } from '@inquirer/prompts'
-import {
-  AddDeveloperCliCommand,
-  AddDeveloperQueryService,
-  AddDeveloperQueryServiceDto,
-  ScrumTeamUseCase,
-} from '@panda-project/use-case'
+import { AddDeveloperCliCommand } from '@panda-project/gateway'
+import { AddDeveloperQueryService, AddDeveloperQueryServiceDto, ScrumTeamUseCase } from '@panda-project/use-case'
 import { Command } from 'commander'
 
 type SelectDeveloper = (arg: AddDeveloperQueryServiceDto['candidateEmployees']) => Promise<{ developerId: number }>
