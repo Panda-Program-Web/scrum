@@ -1,11 +1,6 @@
 import { ProductUseCase } from '@/application/use-case/product'
 import { ProjectUseCase } from '@/application/use-case/project'
-import { CreateProductCommand, CreateProjectCommand } from '@panda-project/core'
-
-export interface InitCommand {
-  getCreateProductCommand(): CreateProductCommand
-  getCreateProjectCommand(): CreateProjectCommand
-}
+import { InitCommand } from '@panda-project/core'
 
 export class InitScenario {
   constructor(

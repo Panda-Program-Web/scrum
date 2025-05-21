@@ -1,8 +1,7 @@
 import { CreateProductCliCommand } from './product-command'
 import { CreateProjectCliCommand } from './project-command'
 
-import { CreateProductCommand, CreateProjectCommand } from '@panda-project/core'
-import { InitCommand } from '@panda-project/use-case'
+import { CreateProductCommand, CreateProjectCommand, InitCommand } from '@panda-project/core'
 
 export class InitCliCommand implements InitCommand {
   constructor(

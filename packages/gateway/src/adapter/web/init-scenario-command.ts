@@ -1,8 +1,7 @@
 import { CreateProductWebCommand } from './product-command'
 import { CreateProjectWebCommand } from './project-command'
 
-import { CreateProductCommand, CreateProjectCommand } from '@panda-project/core'
-import { InitCommand } from '@panda-project/use-case'
+import { CreateProductCommand, CreateProjectCommand, InitCommand } from '@panda-project/core'
 
 export class InitWebCommand implements InitCommand {
   constructor(
