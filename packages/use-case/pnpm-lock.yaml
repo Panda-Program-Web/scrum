@@ -1,0 +1,68 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@panda-project/config':
+        specifier: workspace:*
+        version: link:../config
+      '@panda-project/core':
+        specifier: workspace:*
+        version: link:../core
+      lowdb:
+        specifier: 6.1.1
+        version: 6.1.1
+    devDependencies:
+      '@types/lowdb':
+        specifier: ^1.0.15
+        version: 1.0.15
+      '@types/node':
+        specifier: ^20.8.2
+        version: 20.17.50
+
+packages:
+
+  '@types/lodash@4.17.17':
+    resolution: {integrity: sha512-RRVJ+J3J+WmyOTqnz3PiBLA501eKwXl2noseKOrNo/6+XEHjTAxO4xHvxQB6QuNm+s4WRbn6rSiap8+EA+ykFQ==}
+
+  '@types/lowdb@1.0.15':
+    resolution: {integrity: sha512-xaMNIveDCryK4UvnUJOc2BCOH0lPivdvWHrutsLryo9r9Id3RqZq2RDmT4eddiEPYzu7nJMw6nFIcVifcqjWqg==}
+
+  '@types/node@20.17.50':
+    resolution: {integrity: sha512-Mxiq0ULv/zo1OzOhwPqOA13I81CV/W3nvd3ChtQZRT5Cwz3cr0FKo/wMSsbTqL3EXpaBAEQhva2B8ByRkOIh9A==}
+
+  lowdb@6.1.1:
+    resolution: {integrity: sha512-HO13FCxI8SCwfj2JRXOKgXggxnmfSc+l0aJsZ5I34X3pwzG/DPBSKyKu3Zkgg/pNmx854SVgE2la0oUeh6wzNw==}
+    engines: {node: '>=16'}
+
+  steno@3.2.0:
+    resolution: {integrity: sha512-zPKkv+LqoYffxrtD0GIVA08DvF6v1dW02qpP5XnERoobq9g3MKcTSBTi08gbGNFMNRo3TQV/6kBw811T1LUhKg==}
+    engines: {node: '>=16'}
+
+  undici-types@6.19.8:
+    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
+
+snapshots:
+
+  '@types/lodash@4.17.17': {}
+
+  '@types/lowdb@1.0.15':
+    dependencies:
+      '@types/lodash': 4.17.17
+
+  '@types/node@20.17.50':
+    dependencies:
+      undici-types: 6.19.8
+
+  lowdb@6.1.1:
+    dependencies:
+      steno: 3.2.0
+
+  steno@3.2.0: {}
+
+  undici-types@6.19.8: {}

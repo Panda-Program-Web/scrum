@@ -8,8 +8,8 @@
     "type-check": "tspc --noEmit",
     "jest": "jest"
   },
-  "devDependencies": {
-    "@panda-project/config": "*"
+  "dependencies": {
+    "@panda-project/config": "workspace:*"
   },
   "private": true
 }

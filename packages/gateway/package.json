@@ -1,0 +1,12 @@
+{
+  "name": "@panda-project/gateway",
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@panda-project/config": "workspace:*",
+    "@panda-project/core": "workspace:*",
+    "@panda-project/use-case": "workspace:*"
+  }
+}

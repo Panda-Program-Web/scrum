@@ -2,7 +2,7 @@ import { ProductRepositoryInterface, ProjectRepositoryInterface } from '@panda-p
 
 import { Result } from './types'
 
-import { ProductRepository, ProjectRepository } from '@/gateway/repository/json'
+import { ProductRepository, ProjectRepository } from '@panda-project/gateway/src/repository/json'
 
 export type BreadcrumbDto = {
   projectName: string
