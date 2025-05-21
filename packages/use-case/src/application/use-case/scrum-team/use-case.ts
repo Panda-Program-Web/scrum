@@ -8,13 +8,13 @@ import {
 } from '@panda-project/core'
 
 import {
-  EditScrumTeamCommand,
+  AddDeveloperCommand,
   CreateScrumTeamCommand,
   DisbandScrumTeamCommand,
-  AddDeveloperCommand,
+  EditScrumTeamCommand,
   RemoveDeveloperCommand,
 } from '@/application/use-case/scrum-team'
-import { EmployeeRepository, ScrumTeamRepository } from '@/gateway/repository/json'
+import { EmployeeRepository, ScrumTeamRepository } from '@panda-project/gateway'
 
 export class ScrumTeamUseCase {
   constructor(

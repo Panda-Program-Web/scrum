@@ -1,10 +1,3 @@
-export * from './external/lowdb'
-
-// gateway
-export * from './gateway/repository/json'
-export * from './gateway/adapter/cli'
-export * from './gateway/adapter/web'
-
 // query service
 export * from './application/query-service'
 

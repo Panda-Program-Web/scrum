@@ -1,6 +1,6 @@
 import { EmployeeRepositoryInterface, ScrumTeamRepositoryInterface } from '@panda-project/core'
 
-import { EmployeeRepository, ScrumTeamRepository } from '@/gateway/repository/json'
+import { EmployeeRepository, ScrumTeamRepository } from '@panda-project/gateway'
 
 export type CreateScrumTeamQueryServiceDto = {
   employees: { id: number; name: string }[]
