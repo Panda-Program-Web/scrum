@@ -11,13 +11,13 @@
   },
   "dependencies": {
     "@inquirer/prompts": "^3.1.2",
-    "@panda-project/use-case": "*",
+    "@panda-project/use-case": "workspace:*",
     "commander": "^11.0.0"
   },
   "devDependencies": {
     "@types/commander": "^2.12.2",
     "@types/inquirer": "^9.0.3",
-    "@panda-project/config": "*"
+    "@panda-project/config": "workspace:*"
   },
   "license": "MIT"
 }

@@ -10,11 +10,11 @@
     "jest": "node --experimental-vm-modules ../../node_modules/jest/bin/jest.js"
   },
   "dependencies": {
-    "@panda-project/core": "*",
+    "@panda-project/core": "workspace:*",
     "lowdb": "6.1.1"
   },
   "devDependencies": {
-    "@panda-project/config": "*",
+    "@panda-project/config": "workspace:*",
     "@types/lowdb": "^1.0.15",
     "@types/node": "^20.8.2"
   },
