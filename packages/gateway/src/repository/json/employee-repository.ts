@@ -3,7 +3,7 @@ import { Low } from 'lowdb'
 
 import { JsonRepository } from './json-repository'
 
-import { DataBase, db, EmployeesSchema } from '@/external/lowdb'
+import { DataBase, db, EmployeesSchema } from '../../external/lowdb'
 
 export class EmployeeRepository extends JsonRepository implements EmployeeRepositoryInterface {
   constructor(private readonly lowdb: Low<DataBase> = db) {

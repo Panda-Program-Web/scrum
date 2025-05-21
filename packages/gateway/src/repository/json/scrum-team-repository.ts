@@ -21,7 +21,7 @@ import {
   ProductOwnersSchema,
   ScrumMastersSchema,
   ScrumTeamsSchema,
-} from '@/external/lowdb'
+} from '../../external/lowdb'
 
 export class ScrumTeamRepository extends JsonRepository implements ScrumTeamRepositoryInterface {
   constructor(private readonly lowdb: Low<DataBase> = db) {
