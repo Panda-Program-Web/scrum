@@ -162,6 +162,9 @@ importers:
       '@panda-project/core':
         specifier: workspace:*
         version: link:../core
+      '@panda-project/gateway':
+        specifier: workspace:*
+        version: link:../gateway
       lowdb:
         specifier: 6.1.1
         version: 6.1.1

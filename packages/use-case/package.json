@@ -12,6 +12,7 @@
   "dependencies": {
     "@panda-project/config": "workspace:*",
     "@panda-project/core": "workspace:*",
+    "@panda-project/gateway": "workspace:*",
     "lowdb": "6.1.1"
   },
   "devDependencies": {
