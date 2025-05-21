@@ -1,4 +1,5 @@
 # scrum
+
 このレポジトリは、スクラムのチームを管理するアプリケーションです。Web からも CLI からも動かせます。
 
 ```mermaid
@@ -46,20 +47,21 @@ flowchart TD
 ```
 
 ## Quick Start
+
 アプリケーションを動かす事前準備をします。
 
 ```
-$ yarn install
-$ yarn build
+$ pnpm install
+$ pnpm build
 ```
 
 ### CLI
 
-CLI は `yarn scrum [command]` で動かせます。
+CLI は `pnpm scrum [command]` で動かせます。
 
 ```
 $ cd apps/cli/
-$ yarn scrum help
+$ pnpm scrum help
 Usage: index [options] [command]
 
 Options:
@@ -82,7 +84,7 @@ Commands:
 DB を作成し、社員を追加してください。
 
 ```
-$ yarn scrum init
+$ pnpm scrum init
 最初の設定を開始します
 ? 開発するプロダクトの名前は？ sample
 ? プロジェクト名は？ sample-project
@@ -90,7 +92,7 @@ $ yarn scrum init
 ```
 
 ```
-$ yarn scrum add-employee
+$ pnpm scrum add-employee
 ? スクラムチームに参加する社員の名前は？（姓名は半角スペース区切り） foo bar
 社員を登録しました: foo bar
 ```
@@ -108,7 +110,7 @@ Next.js を開発者モードで動かします。
 
 ```
 $ cd apps/web/
-$ yarn next:dev
+$ pnpm next:dev
 ```
 
 http://localhost:3000 にアクセスすると、以下の画面が表示されます。
