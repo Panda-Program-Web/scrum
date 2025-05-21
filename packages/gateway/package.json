@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "tspc --emitDeclarationOnly && node ../config/build.mjs",
-    "build": "esbuild index.ts --bundle --outfile=dist/index.js --platform=node --format=esm && tspc --emitDeclarationOnly",
+    "build": "rm -rf dist && esbuild index.ts --bundle --outfile=dist/index.js --platform=node --format=esm && tspc --emitDeclarationOnly",
     "type-check": "tspc --noEmit",
     "jest": "node --experimental-vm-modules ../../node_modules/jest/bin/jest.js"
   },
@@ -14,7 +14,6 @@
   "dependencies": {
     "@panda-project/config": "workspace:*",
     "@panda-project/core": "workspace:*",
-    "@panda-project/use-case": "workspace:*",
     "lowdb": "6.1.1"
   },
   "devDependencies": {

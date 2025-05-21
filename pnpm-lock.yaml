@@ -150,9 +150,6 @@ importers:
       '@panda-project/core':
         specifier: workspace:*
         version: link:../core
-      '@panda-project/use-case':
-        specifier: workspace:*
-        version: link:../use-case
       lowdb:
         specifier: 6.1.1
         version: 6.1.1
