@@ -1,4 +1,4 @@
-import { createDb, dbFileExists } from '@panda-project/use-case'
+import { createDb, dbFileExists } from '@panda-project/gateway'
 import { Command } from 'commander'
 
 import { addAddDeveloperCommand, addRemoveDeveloperCommand } from '~/developer'

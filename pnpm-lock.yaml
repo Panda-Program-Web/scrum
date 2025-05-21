@@ -62,6 +62,9 @@ importers:
       '@inquirer/prompts':
         specifier: ^3.1.2
         version: 3.3.2
+      '@panda-project/gateway':
+        specifier: workspace:*
+        version: link:../../packages/gateway
       '@panda-project/use-case':
         specifier: workspace:*
         version: link:../../packages/use-case

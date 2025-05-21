@@ -1,10 +1,6 @@
 import { input, select } from '@inquirer/prompts'
-import {
-  EditEmployeeCliCommand,
-  EditEmployeeQueryService,
-  EditEmployeeQueryServiceDto,
-  EmployeeUseCase,
-} from '@panda-project/use-case'
+import { EditEmployeeCliCommand } from '@panda-project/gateway'
+import { EditEmployeeQueryService, EditEmployeeQueryServiceDto, EmployeeUseCase } from '@panda-project/use-case'
 import { Command } from 'commander'
 
 type UserInput = (arg: EditEmployeeQueryServiceDto) => Promise<{ employeeId: number; newEmployeeName: string }>

@@ -1,6 +1,6 @@
 import { select } from '@inquirer/prompts'
+import { CreateScrumTeamCliCommand } from '@panda-project/gateway'
 import {
-  CreateScrumTeamCliCommand,
   EditScrumTeamQueryService,
   EditScrumTeamQueryServiceDto,
   EditScrumTeamQueryServiceInput,
