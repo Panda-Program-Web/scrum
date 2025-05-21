@@ -1,7 +1,7 @@
-import { ScrumTeamRepository } from '../scrum-team-repository';
-import {ScrumTeam, ScrumTeamId} from "@panda-project/core";
-import {EmployeesSchema, Low, ProductOwnersSchema, ScrumTeamsSchema} from "@/external/lowdb";
-import { setupDataBase } from './helper/database';
+import { Low, ProductOwnersSchema, ScrumTeamsSchema } from '@/external/lowdb'
+import { ScrumTeam, ScrumTeamId } from '@panda-project/core'
+import { ScrumTeamRepository } from '../scrum-team-repository'
+import { setupDataBase } from './helper/database'
 
 let repository: ScrumTeamRepository
 let mockDb: Low
@@ -37,21 +37,23 @@ const fabricateProductOwner = (data: Partial<ProductOwnersSchema[number]> = null
 }
 
 // テストデータをDBに保存する
-const productOwnerFixture = async (data: Partial<ProductOwnersSchema[number] & EmployeesSchema[number]> = null): Promise<ProductOwnersSchema[number]> => {
-  const employee = {
-    id: "",
-    first_name: "",
-    family_name: "",
-  }
-  const testData = fabricate({
-    scrum_team_id: data?.scrum_team_id,
-    employee_id: data?.employee_id,
-  })
-  await mockDb.read()
-  const { employees, productOwners } = mockDb.data
-  employees.push(employee)
-  productOwners.push(testData)
-  await mockDb.write()
-  return testData
-}
+describe('save', () => {
+  // AI Generated Test
+  it('should save new scrum team with members', async () => {
+    const scrumTeam = new ScrumTeam(
+      new ScrumTeamId(1),
+      // Mock minimum required data
+      { getEmployeeId: () => ({ toInt: () => 100 }) } as any, // ProductOwner
+      { getEmployeeId: () => ({ toInt: () => 101 }) } as any, // ScrumMaster
+      [{ getEmployeeId: () => ({ toInt: () => 102 }) } as any, { getEmployeeId: () => ({ toInt: () => 103 }) } as any] // Developers
+    )
 
+    await repository.save(scrumTeam)
+
+    await mockDb.read()
+    expect(mockDb.data.scrumTeams).toHaveLength(1)
+    expect(mockDb.data.productOwners).toHaveLength(1)
+    expect(mockDb.data.scrumMasters).toHaveLength(1)
+    expect(mockDb.data.developers).toHaveLength(2)
+  })
+})

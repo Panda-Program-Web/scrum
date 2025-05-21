@@ -9,7 +9,7 @@
     "jest": "jest"
   },
   "devDependencies": {
-    "@panda-project/config": "*"
+    "@panda-project/config": "workspace:*"
   },
   "private": true
 }
