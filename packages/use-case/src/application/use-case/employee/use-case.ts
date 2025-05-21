@@ -1,11 +1,14 @@
-import { Employee, EmployeeId, EmployeeRepositoryInterface, ScrumTeamRepositoryInterface } from '@panda-project/core'
-
 import {
   CreateEmployeeCommand,
   CreateMultipleEmployeeCommand,
   EditEmployeeCommand,
+  Employee,
+  EmployeeId,
+  EmployeeRepositoryInterface,
   RemoveEmployeeCommand,
-} from '@/application/use-case/employee'
+  ScrumTeamRepositoryInterface,
+} from '@panda-project/core'
+
 import { EmployeeRepository, ScrumTeamRepository } from '@panda-project/gateway'
 
 export class EmployeeUseCase {

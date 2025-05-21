@@ -1,6 +1,4 @@
-import { Product, ProductId, ProductRepositoryInterface } from '@panda-project/core'
-
-import { CreateProductCommand } from './command'
+import { CreateProductCommand, Product, ProductId, ProductRepositoryInterface } from '@panda-project/core'
 
 import { ProductRepository } from '@panda-project/gateway'
 

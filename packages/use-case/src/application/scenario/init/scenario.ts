@@ -1,5 +1,6 @@
-import { CreateProductCommand, ProductUseCase } from '@/application/use-case/product'
-import { CreateProjectCommand, ProjectUseCase } from '@/application/use-case/project'
+import { ProductUseCase } from '@/application/use-case/product'
+import { ProjectUseCase } from '@/application/use-case/project'
+import { CreateProductCommand, CreateProjectCommand } from '@panda-project/core'
 
 export interface InitCommand {
   getCreateProductCommand(): CreateProductCommand

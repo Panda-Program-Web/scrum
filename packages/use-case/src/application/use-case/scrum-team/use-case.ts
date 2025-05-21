@@ -1,19 +1,17 @@
 import {
+  AddDeveloperCommand,
+  CreateScrumTeamCommand,
   Developer,
+  DisbandScrumTeamCommand,
+  EditScrumTeamCommand,
   EmployeeRepositoryInterface,
   ProductOwner,
+  RemoveDeveloperCommand,
   ScrumMaster,
   ScrumTeam,
   ScrumTeamRepositoryInterface,
 } from '@panda-project/core'
 
-import {
-  AddDeveloperCommand,
-  CreateScrumTeamCommand,
-  DisbandScrumTeamCommand,
-  EditScrumTeamCommand,
-  RemoveDeveloperCommand,
-} from '@/application/use-case/scrum-team'
 import { EmployeeRepository, ScrumTeamRepository } from '@panda-project/gateway'
 
 export class ScrumTeamUseCase {

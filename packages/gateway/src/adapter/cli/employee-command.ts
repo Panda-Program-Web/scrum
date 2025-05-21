@@ -1,11 +1,11 @@
-import { EmployeeId, EmployeeName } from '@panda-project/core'
-
 import {
   CreateEmployeeCommand,
   CreateMultipleEmployeeCommand,
   EditEmployeeCommand,
+  EmployeeId,
+  EmployeeName,
   RemoveEmployeeCommand,
-} from '@panda-project/use-case'
+} from '@panda-project/core'
 
 export class CreateEmployeeCliCommand implements CreateEmployeeCommand {
   constructor(private readonly employeeName: string) {}
