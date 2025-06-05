@@ -1,0 +1,11 @@
+{
+  "extends": "@panda-project/config/base.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"]
+    }
+  },
+  "include": ["src/**/*"]
+}
