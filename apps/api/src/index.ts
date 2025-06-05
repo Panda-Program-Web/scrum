@@ -16,6 +16,10 @@ import {
   EmployeeUseCase,
   InitScenario,
   ScrumTeamUseCase,
+  // Add query services for GET endpoints
+  EmployeeListQueryService,
+  ScrumTeamQueryService,
+  ProjectListQueryService,
 } from '@panda-project/use-case'
 
 const app = new Hono()
@@ -167,6 +171,58 @@ app.delete('/team/:id', async (c) => {
       return c.json({ errors: e.formErrors.fieldErrors }, 400)
     }
     throw e
+  }
+})
+
+// GET endpoints for retrieving data
+app.get('/employees', async (c) => {
+  try {
+    const { data } = await new EmployeeListQueryService().exec()
+    return c.json({ employees: data?.employees || [] })
+  } catch (e) {
+    return c.json({ error: 'Failed to fetch employees' }, 500)
+  }
+})
+
+app.get('/employees/:id', async (c) => {
+  const schema = z.object({ id: z.string().regex(/^\d+$/) })
+  try {
+    const { id } = schema.parse({ id: c.req.param('id') })
+    const { data } = await new EmployeeListQueryService().exec()
+    const employee = data?.employees?.find(emp => emp.id === Number.parseInt(id, 10))
+    
+    if (!employee) {
+      return c.json({ error: 'Employee not found' }, 404)
+    }
+    
+    return c.json({ employee })
+  } catch (e) {
+    if (e instanceof z.ZodError) {
+      return c.json({ errors: e.formErrors.fieldErrors }, 400)
+    }
+    return c.json({ error: 'Failed to fetch employee' }, 500)
+  }
+})
+
+app.get('/team', async (c) => {
+  try {
+    const { data } = await new ScrumTeamQueryService().exec()
+    return c.json({ scrumTeam: data?.scrumTeam || null })
+  } catch (e) {
+    return c.json({ error: 'Failed to fetch scrum team' }, 500)
+  }
+})
+
+app.get('/project', async (c) => {
+  try {
+    const { data } = await new ProjectListQueryService().exec()
+    return c.json({
+      product: data?.product || null,
+      project: data?.project || null,
+      scrumTeam: data?.scrumTeam || null
+    })
+  } catch (e) {
+    return c.json({ error: 'Failed to fetch project data' }, 500)
   }
 })
 
