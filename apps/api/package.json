@@ -10,14 +10,15 @@
     "type-check": "tspc --noEmit"
   },
   "dependencies": {
-    "hono": "^3.11.0",
     "@panda-project/gateway": "workspace:*",
     "@panda-project/use-case": "workspace:*",
+    "hono": "^3.11.0",
     "zod": "^3.25.8"
   },
   "devDependencies": {
-    "@types/node": "^20.8.2",
-    "@panda-project/config": "workspace:*"
+    "@hono/node-server": "^1.14.3",
+    "@panda-project/config": "workspace:*",
+    "@types/node": "^20.8.2"
   },
   "license": "MIT"
 }

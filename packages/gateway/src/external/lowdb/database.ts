@@ -1,4 +1,6 @@
 import fs from 'node:fs'
+import { fileURLToPath } from 'node:url'
+import { dirname as pathDirname } from 'node:path'
 
 import { Adapter, Low, Memory } from 'lowdb'
 import { JSONFile } from 'lowdb/node'
@@ -7,7 +9,7 @@ import { DataBase, createDefaultData } from './schema'
 
 const isTest = process.env.NODE_ENV === 'test'
 
-const dirname = isTest ? '/mock/path' : __dirname
+const dirname = isTest ? '/mock/path' : pathDirname(fileURLToPath(import.meta.url))
 const cliPathIndex = dirname.indexOf('/apps/cli')
 const webPathIndex = dirname.indexOf('/apps/web')
 const apiPathIndex = dirname.indexOf('/apps/api')
