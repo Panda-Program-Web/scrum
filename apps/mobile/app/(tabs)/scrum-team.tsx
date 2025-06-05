@@ -11,7 +11,7 @@ import { MobileScrumTeamQueryService } from '@/services/MobileScrumTeamQueryServ
 
 type ScrumTeamData = ScrumTeamQueryServiceDto['scrumTeam'];
 
-export default function HomeScreen() {
+export default function ScrumTeamScreen() {
   const [scrumTeam, setScrumTeam] = useState<ScrumTeamData>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

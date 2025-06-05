@@ -87,6 +87,15 @@ importers:
       '@expo/vector-icons':
         specifier: ^14.1.0
         version: 14.1.0(expo-font@13.3.1(expo@53.0.10(@babel/core@7.27.1)(@expo/metro-runtime@5.0.4(react-native@0.79.3(@babel/core@7.27.1)(@react-native-community/cli@13.6.6)(@types/react@19.0.14)(react@19.0.0)))(react-native-webview@13.13.5(react-native@0.79.3(@babel/core@7.27.1)(@react-native-community/cli@13.6.6)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react-native@0.79.3(@babel/core@7.27.1)(@react-native-community/cli@13.6.6)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react@19.0.0))(react-native@0.79.3(@babel/core@7.27.1)(@react-native-community/cli@13.6.6)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0)
+      '@panda-project/core':
+        specifier: workspace:*
+        version: link:../../packages/core
+      '@panda-project/gateway':
+        specifier: workspace:*
+        version: link:../../packages/gateway
+      '@panda-project/use-case':
+        specifier: workspace:*
+        version: link:../../packages/use-case
       '@react-navigation/bottom-tabs':
         specifier: ^7.3.10
         version: 7.3.14(@react-navigation/native@7.1.10(react-native@0.79.3(@babel/core@7.27.1)(@react-native-community/cli@13.6.6)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react-native-safe-area-context@5.4.0(react-native@0.79.3(@babel/core@7.27.1)(@react-native-community/cli@13.6.6)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react-native-screens@4.11.1(react-native@0.79.3(@babel/core@7.27.1)(@react-native-community/cli@13.6.6)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react-native@0.79.3(@babel/core@7.27.1)(@react-native-community/cli@13.6.6)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0)
