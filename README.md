@@ -99,6 +99,16 @@ $ pnpm scrum add-employee
 
 社員を2名以上登録すると、`create-team` コマンドでスクラムチームを作成できます。
 
+### API
+
+Hono を使った API サーバーでも同じユースケースを利用できます。
+各エンドポイントでは zod を用いてリクエストをバリデートしています。
+
+```bash
+$ cd apps/api/
+$ pnpm build && pnpm start
+```
+
 ### Web
 
 > [!NOTE]  

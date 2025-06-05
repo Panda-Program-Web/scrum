@@ -1,0 +1,24 @@
+{
+  "name": "@panda-project/api",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node ../../packages/config/build.mjs",
+    "build": "esbuild src/index.ts --bundle --outfile=dist/index.js --platform=node --format=esm",
+    "start": "node dist/index.js",
+    "type-check": "tspc --noEmit"
+  },
+  "dependencies": {
+    "@panda-project/gateway": "workspace:*",
+    "@panda-project/use-case": "workspace:*",
+    "hono": "^3.11.0",
+    "zod": "^3.25.8"
+  },
+  "devDependencies": {
+    "@hono/node-server": "^1.14.3",
+    "@panda-project/config": "workspace:*",
+    "@types/node": "^20.8.2"
+  },
+  "license": "MIT"
+}
