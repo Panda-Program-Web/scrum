@@ -1,0 +1,13 @@
+{
+  "extends": "@panda-project/config/base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"],
+      "@/*": ["../../packages/use-case/src/*"]
+    },
+    "outDir": "./dist"
+  },
+  "include": ["src"],
+  "exclude": ["**/*.test.ts"]
+}
