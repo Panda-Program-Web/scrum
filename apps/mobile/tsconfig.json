@@ -1,11 +1,17 @@
 {
-  "extends": "@panda-project/config/base.json",
+  "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "jsx": "react",
-    "baseUrl": ".",
+    "strict": true,
     "paths": {
-      "~/*": ["src/*"]
+      "@/*": [
+        "./*"
+      ]
     }
   },
-  "include": ["src/**/*"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+  ]
 }
